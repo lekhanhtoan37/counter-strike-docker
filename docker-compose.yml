@@ -9,8 +9,10 @@ services:
         - steam_user=${STEAM_USER:-anonymous}
         - steam_password=${STEAM_PASSWORD:-''}
         - amxmod_version=1.8.2
+
   server:
     image: cs16-server:$IMAGE_TAG
+    container_name: dmm
     build:
       context: .
       dockerfile: image/cs16-server/Dockerfile
@@ -25,7 +27,7 @@ services:
       - YAPB_ENABLED
       - YAPB_PASSWORD
       - CSDM_MODE
-    restart: always
+    
     ports:
       - "27015:27015/udp"
       - "27015:27015/tcp"
