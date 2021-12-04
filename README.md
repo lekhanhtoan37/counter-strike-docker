@@ -21,13 +21,16 @@ Build & run
     ```
     $ docker-compose build server
     ```
+   
+4. Add map to `./maps` and map-name to `maps.ini`
+   ```
+   
+   ```
     
-4. Edit `.env` configuration variables if needed (see image entrypoint file `hlds_run.sh` if you want to figure out how variables are used).
+5. Edit `.env` configuration variables if needed (see image entrypoint file `hlds_run.sh` if you want to figure out how variables are used).
 
-5. Start your server:
+6. Start with rebuild option your server:
 
     ```
-    $ docker-compose up -d server
+    $ docker-compose up -d --build server
     ```
-
-6. Enjoy ;)

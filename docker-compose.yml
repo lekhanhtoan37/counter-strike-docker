@@ -12,7 +12,7 @@ services:
 
   server:
     image: cs16-server:$IMAGE_TAG
-    container_name: dmm
+    container_name: toandeptrai
     build:
       context: .
       dockerfile: image/cs16-server/Dockerfile
